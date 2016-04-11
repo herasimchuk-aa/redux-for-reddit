@@ -1,0 +1,25 @@
+.rc-tooltip-arrow {
+	display: none;
+}
+
+.rc-tooltip-inner {
+	border: 1px solid #ececec;
+	border-radius: 0px;
+	padding: 0px;
+}
+
+.rc-tooltip-inner ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.rc-tooltip-inner li {
+	padding: 5px 15px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.rc-tooltip-inner li:hover {
+	background-color: #2BB55C;
+	color: #ffffff;
+}

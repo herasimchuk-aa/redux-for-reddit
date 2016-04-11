@@ -1,0 +1,43 @@
+.vote {
+	text-align: center;
+	font-size: 20px;
+}
+
+.vote .vote__score {
+	margin: 3px 0px;
+}
+
+
+/*.vote .vote__arrow-up:hover {
+	font-size: 140%; 
+	cursor: pointer;
+}
+
+.vote .vote__arrow-down:hover {
+	font-size: 140%; 
+	cursor: pointer;
+}
+
+.vote .vote__arrow-up,
+.vote .vote__arrow-down {
+	color: #CECECE;
+}
+
+.vote .vote__arrow-up--enabled {
+	color: #208845;
+}*/
+
+.vote .vote__arrow-up,
+.vote .vote__arrow-down {
+	color: #ECECEC;
+}
+
+.vote .vote__arrow-up--selected,
+.vote .vote__arrow-down--selected {
+	color: #333333;
+}
+
+.vote .vote__arrow-up--active:hover,
+.vote .vote__arrow-down--active:hover  {
+	color: #333333;
+}

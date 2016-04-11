@@ -1,0 +1,8 @@
+.select-filter .select-filter__selector {
+	width: 115px;
+	text-align: right;
+}
+
+.select-filter .select-filter__selector span {
+	cursor: pointer;
+}

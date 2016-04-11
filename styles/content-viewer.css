@@ -1,0 +1,34 @@
+.thing-viewer {
+	text-align: justify;
+	padding: 10px 150px;
+    color: #101010;
+
+    font-family: Helvetica, sans-serif;
+}
+
+.thing-viewer .thing-viewer__title {
+	text-align: center;
+}
+
+.thing-viewer .thing-viewer__info {
+	text-align: right;
+}
+
+.thing-viewer .thing-viewer__body {
+	text-align: justify;
+}
+
+.thing-viewer hr {
+	border: 0;
+	border-bottom: 1px solid #101010;
+}
+
+.thing-viewer pre {
+	padding: 20px;
+	background-color: #F1F1F1;
+}
+
+.thing-viewer a {
+	color: green;
+	text-decoration: none;
+}

@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
-
-import HtmlViewer 	from './HtmlViewer'
-import VideoViewer  from './VideoViewer'
-import ImageViewer	from './ImageViewer'
+import decode               from 'decode-html'
 
 export default class SelfViewer extends Component {
-	render() {
-		let { url } = this.props
+    createInnerHTML() { 
+        return { __html: decode(this.props.content.body) } 
+    }
 
-		return (
-			<div className="thing-viewer">
-				<img src={url}/>			
-			</div>
-		)
-	}
+    render() {
+        let { content } = this.props
+
+        return (
+            <div className="self-viewer">
+                <div className="viewer__body">
+                    <div dangerouslySetInnerHTML={this.createInnerHTML()}></div>
+                </div>         
+            </div>
+        )
+    }
 }

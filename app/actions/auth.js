@@ -1,30 +1,30 @@
 export function loginStarted() {
-	return {
-		type: 'LOGIN_STARTED'
-	}
+    return {
+        type: 'LOGIN_STARTED'
+    }
 }
 
 export function loginCompleted() {
-	return {
-		type: 'LOGIN_COMPLETED'
-	}
+    return {
+        type: 'LOGIN_COMPLETED'
+    }
 }
 
 export function loginError(error) {
-	return {
-		type: 'LOGIN_ERROR',
-		payload: error
-	}
+    return {
+        type: 'LOGIN_ERROR',
+        payload: error
+    }
 }
 
 export function logout() {
-	return {
-		type: 'LOGOUT'
-	}
+    return {
+        type: 'LOGOUT'
+    }
 }
 
 export function authRequired() {
-	return {
-		type: 'AUTH_REQUIRED'
-	}
+    return {
+        type: 'AUTH_REQUIRED'
+    }
 }

@@ -1,61 +1,61 @@
 .nav-link {
-	width: 100%;
-	height: 120px;
-	padding: 15px 15px 15px 10px;
-	border-bottom: 1px solid #ececec;
-	overflow: hidden;
+    width: 100%;
+    height: 120px;
+    padding: 15px 15px 15px 10px;
+    border-bottom: 1px solid #ececec;
+    overflow: hidden;
 
-	display: table;
+    display: table;
 }
 
 .nav-link .nav-link__title {
-	display: block;
-	height: 50.4; /* font-size * line-hieght * limes-to-show */
+    display: block;
+    height: 50.4; /* font-size * line-hieght * limes-to-show */
 
-	font-size: 14px;
-  	line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.2;
 
-  	overflow: hidden;
-	
-	display: -webkit-box;
-	-webkit-line-clamp: $lines-to-show;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-  	text-overflow: ellipsis;
+    overflow: hidden;
+    
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0 auto;
 }
 
 .nav-link .nav-link__tagline {
-	font-size: 10px;
+    font-size: 10px;
     font-weight: 500;
         margin-bottom: 5px;
         text-transform: uppercase;
 }
 
 .nav-link .nav-link__domain {
-	font-size: 10px;
+    font-size: 10px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
 .nav-link .nav-link__vote-container {
-	width: 60px;
-	max-width: 60px;
-	display: table-cell;
-	vertical-align: middle;	
+    width: 60px;
+    max-width: 60px;
+    display: table-cell;
+    vertical-align: middle; 
 }
 
 .nav-link .nav_link__body-container {
-	padding-left: 15px;
-	vertical-align: top;
+    padding-left: 15px;
+    vertical-align: top;
 }
 
 .nav-link .nav-link__tagline-time {
-	float: left;
+    float: left;
 }
 
 .nav-link .nav-link__tagline-comments {
-	float: right;
+    float: right;
 }
 
 .nav-link .nav-link__tagline::after {
@@ -66,13 +66,13 @@
 }
 
 .nav-link:hover {
-	background-color: #2BB55C;
-	cursor: pointer;
-	color: white;
+    background-color: #2BB55C;
+    cursor: pointer;
+    color: white;
 }
 
 .nav-link .small-thumbnail {
-	width: 77px;
+    width: 77px;
     height: 77px;
     padding-left: 0px;
     border-radius: 72px;

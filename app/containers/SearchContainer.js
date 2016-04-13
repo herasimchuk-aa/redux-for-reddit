@@ -1,14 +1,14 @@
-import React, { Component } 	from 'react'
-import Search 					from '../components/Search'
+import React, { Component }     from 'react'
+import Search                   from '../components/Search'
 
-require('../../styles/search.css')
+import '../../styles/search.css'
 
 export default class SearchContainer extends Component {
-	render() {
-		return (
-			<div>
-				<Search/>
-			</div>
-		)
-	}
+    render() {
+        return (
+            <div>
+                <Search/>
+            </div>
+        )
+    }
 }

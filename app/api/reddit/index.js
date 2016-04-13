@@ -1,9 +1,9 @@
 import Snoocore from 'snoocore'
 
-import links 	from './links'
+import links    from './links'
 import comments from './comments'
-import user 	from './user'
-import vote		from './vote'
+import user     from './user'
+import vote     from './vote'
 
 const modules = {
   links,
@@ -13,21 +13,22 @@ const modules = {
 }
 
 class API {
-	constructor() {
-		const reddit = new Snoocore({
-		    userAgent: 'redux-for-reddit',
-		    oauth: {
-		    	type: 'implicit',
-		    	key: 'enmEpJObI3qUaQ',
-		    	redirectUri: 'http://localhost:3000/auth.html',
-		     	scope: [ 'identity', 'read', 'subscribe', 'modconfig', 'submit', 'vote' ]
-		    }
-		})
+    constructor() {
+        console.log(Snoocore)
+        const reddit = new Snoocore({
+            userAgent: 'redux-for-reddit',
+            oauth: {
+                type: 'implicit',
+                key: 'enmEpJObI3qUaQ',
+                redirectUri: 'http://localhost:3000/auth.html',
+                scope: [ 'identity', 'read', 'subscribe', 'modconfig', 'submit', 'vote' ]
+            }
+        })
 
-	    for (let a in modules) {
-      		this[a] = new modules[a](reddit);
-    	}
-	}
+        for (let a in modules) {
+            this[a] = new modules[a](reddit);
+        }
+    }
 }
 
 export default new API()

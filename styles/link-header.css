@@ -1,0 +1,46 @@
+.link-header {
+    display: table;
+}
+
+.link-header .link-header__vote-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.link-header .link-header__thumbnail-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+.link-header .link-header__content-container {
+    padding: 5px 5px 5px 15px;
+    vertical-align: middle;
+}
+
+.link-header .link-header__title {
+
+}
+
+.link-header .link-header__controls-container {
+    padding-bottom: 0px;
+}
+
+.link-header .link-header__tagline-container {
+    margin: 3px 0px 4px 0px;
+    font-size: 8px;
+}
+
+.link-header .link-header__controls-container a {
+    display: inline-block;
+    margin-right: 15px;
+
+    font-size: 10px;
+}
+
+.link-header .small-thumbnail {
+    width: 77px;
+    height: 77px;
+    padding-left: 0px;
+    border-radius: 72px;
+}

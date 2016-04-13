@@ -1,34 +1,34 @@
 .comments-tree {
-	margin: 40px;
+    margin: 40px;
 }
 
 .comments-tree__branch {
-	padding: 0px 0px 0px 25px;
-	border-left: 1px dotted #C1C1C1; 
+    padding: 0px 0px 0px 25px;
+    border-left: 1px dotted #C1C1C1; 
 }
 
 .comment {
-	display: table;
-	padding: 3px 3px 10px 3px;
+    display: table;
+    padding: 3px 3px 10px 3px;
 }
 
 .comment__vote-container {
-	display: table-cell;
-	vertical-align: top;	
-	color: #444444;
+    display: table-cell;
+    vertical-align: top;    
+    color: #444444;
 }
 
 .comment__content-container {
-	display: table-cell;
-	vertical-align: top;
-	padding-left: 10px;
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 10px;
 }
 
 .comment__tagline {
-	font-size: 8px;
-	padding-bottom: 5px;
+    font-size: 8px;
+    padding-bottom: 5px;
 }
 
 .comments-tree__load-more {
-	padding: 3px 3px 10px 3px;
+    padding: 3px 3px 10px 3px;
 }

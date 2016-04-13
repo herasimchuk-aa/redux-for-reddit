@@ -1,34 +1,51 @@
-.thing-viewer {
-	text-align: justify;
-	padding: 10px 150px;
+.index-viewer {
+    text-align: justify;
+    padding: 10px 150px;
     color: #101010;
 
     font-family: Helvetica, sans-serif;
 }
 
-.thing-viewer .thing-viewer__title {
-	text-align: center;
+.index-viewer .viewer__title {
+    text-align: center;
 }
 
-.thing-viewer .thing-viewer__info {
-	text-align: right;
+.index-viewer .viewer__info {
+    text-align: right;
 }
 
-.thing-viewer .thing-viewer__body {
-	text-align: justify;
+.index-viewer .viewer__body {
+    line-height: 1.3;
 }
 
-.thing-viewer hr {
-	border: 0;
-	border-bottom: 1px solid #101010;
+.index-viewer hr {
+    border: 0;
+    border-bottom: 1px solid #101010;
 }
 
-.thing-viewer pre {
-	padding: 20px;
-	background-color: #F1F1F1;
+.index-viewer pre {
+    padding: 20px;
+    background-color: #F1F1F1;
 }
 
-.thing-viewer a {
-	color: green;
-	text-decoration: none;
+.index-viewer a {
+    color: #428C5C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.index-viewer ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.index-viewer li { 
+    padding-left: 16px; 
+}
+
+.index-viewer li:before {
+    content: "•";
+    padding-right: 8px;
+    color: #428C5C;
 }

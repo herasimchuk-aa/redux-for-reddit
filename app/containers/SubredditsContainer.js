@@ -1,36 +1,34 @@
-import React, { Component }		from 'react'
-import { bindActionCreators }	from 'redux'
-import { connect }				from 'react-redux'
+import React, { Component }     from 'react'
+import { bindActionCreators }   from 'redux'
+import { connect }              from 'react-redux'
 
-import * as subreddits			from '../actions/subreddits'
-import Subreddits 				from '../components/Subreddits'
+import { fetchSubreddits }      from '../actions/subreddits'
+import Subreddits               from '../components/Subreddits'
 
 export default class SubredditsContainer extends Component {
-	componentDidMount() {
-		this.props.fetchSubreddits()
-	}
+    componentDidMount() {
+        this.props.fetchSubreddits()
+    }
 
-	render() {
-		return (
-			<div>
-				<Subreddits subreddits={this.props.subreddits}/>
-			</div>
-		)
-	}
+    render() {
+        return (
+            <div>
+                <Subreddits subreddits={this.props.subreddits}/>
+            </div>
+        )
+    }
 }
 
 function mapStateToProps(state) {
-	let subreddits = state.subreddits.entities
-
-	return {
-		subreddits		
-	}
+    return {
+        subreddits: state.subreddits.entities
+    }
 }
 
 function mapDispatchToProps(dispatch) {
-	return {
-		fetchSubreddits: bindActionCreators(subreddits.fetchSubreddits, dispatch)
-	}
+    return {
+        fetchSubreddits: bindActionCreators(fetchSubreddits, dispatch)
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SubredditsContainer)

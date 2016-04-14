@@ -2,8 +2,8 @@ import React, { Component }     from 'react'
 import { bindActionCreators }   from 'redux'
 import { connect }              from 'react-redux'
 
-import { fetchSubreddits }      from '../actions/subreddits'
-import Subreddits               from '../components/Subreddits'
+import { loadSubredditsStarted }      from '../actions/subreddits'
+import SubredditList                     from '../components/SubredditList'
 
 export default class SubredditsContainer extends Component {
     componentDidMount() {
@@ -13,7 +13,7 @@ export default class SubredditsContainer extends Component {
     render() {
         return (
             <div>
-                <Subreddits subreddits={this.props.subreddits}/>
+                <SubredditList subreddits={this.props.subreddits}/>
             </div>
         )
     }
@@ -27,7 +27,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        fetchSubreddits: bindActionCreators(fetchSubreddits, dispatch)
+        fetchSubreddits: bindActionCreators(loadSubredditsStarted, dispatch)
     }
 }
 

@@ -10,3 +10,10 @@ export function loadSubredditsCompleted(result) {
         payload: result
     }
 }
+
+export function loadSubredditsError(result) {
+    return {
+        type: 'LOAD_SUBREDDITS_ERROR',
+        payload: result
+    }
+}

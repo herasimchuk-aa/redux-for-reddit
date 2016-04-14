@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 
 import '../../styles/subreddits.css'
 
-export default class Subreddits extends Component {
+export default class SubredditList extends Component {
     render() {
         let subreddits = this.props.subreddits
 
         let content
-        if (subreddits && subreddits.children) {
-            content = subreddits.children.map(subreddit => {
+        if (subreddits) {
+            content = subreddits.map(subreddit => {
                 return (
-                    <div>{subreddit.data.url}</div>
+                    <div>{subreddit.url}</div>
                 )
             })
         }

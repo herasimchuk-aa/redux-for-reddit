@@ -1,20 +1,21 @@
 import Snoocore from 'snoocore'
 
-import links    from './links'
-import comments from './comments'
-import user     from './user'
-import vote     from './vote'
+import links        from './links'
+import comments     from './comments'
+import user         from './user'
+import vote         from './vote'
+import subreddits   from './subreddits'
 
 const modules = {
   links,
   comments,
   user,
-  vote
+  vote,
+  subreddits
 }
 
 class API {
     constructor() {
-        console.log(Snoocore)
         const reddit = new Snoocore({
             userAgent: 'redux-for-reddit',
             oauth: {

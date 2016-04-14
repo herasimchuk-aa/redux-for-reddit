@@ -1,8 +1,9 @@
 import { take, put, call, fork, cancel, apply } from 'redux-saga/effects'
 import { takeEvery }                            from 'redux-saga'
 
-import * as actions     from '../actions/comments'
-import api              from '../api/reddit/index'
+import { loadCommentsCompleted,
+		 loadCommentsError }     from '../actions/comments'
+import api              		 from '../api/reddit/index'
 
 function* fetchComments(action) {
     try {

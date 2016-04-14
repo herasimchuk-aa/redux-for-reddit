@@ -6,6 +6,7 @@ import fetchComments    from './fetchComments'
 import selectLink       from './selectLink'
 import updateFilter     from './updateFilter'
 import vote             from './vote'
+import fetchSubreddits  from './fetchSubreddits'
 
 export default function* root(getState) {
     yield [
@@ -14,6 +15,7 @@ export default function* root(getState) {
         fork(selectLink),
         fork(fetchComments),
         fork(updateFilter),
-        fork(vote)
+        fork(vote),
+        fork(fetchSubreddits)
     ]
 }   

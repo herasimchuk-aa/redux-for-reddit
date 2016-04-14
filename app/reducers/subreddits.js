@@ -2,7 +2,8 @@ import { handleActions } from 'redux-actions'
 
 const defaultState = {
     isPending: false,
-    entities: {}
+    entities: [],
+    page: 0
 }
 
 export const subreddits = handleActions({
@@ -15,7 +16,8 @@ export const subreddits = handleActions({
     ['LOAD_SUBREDDITS_COMPLETED']: (state, action) => ({
         ...state,
         isPending: false,
-        entities: action.payload
+        entities: action.payload,
+        page: ++state.page
     }),
 
 }, defaultState)

@@ -1,21 +1,22 @@
 var path = require('path');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './app/index.js',
     output: {
-        path: __dirname + '/app',
-        filename: 'bundle.js',
-        publicPath: '/',
+        path: './build',
+        filename: 'bundle.js'
     },
     devServer: {
         port: 3000,
-        contentBase: "./app"
+        historyApiFallback: true,
+        contentBase: "./build"
     },
     module: {
         preLoaders: [
             {
                 test: /\.jsx?$/, 
-                exclude: /node_modules/, // exclude any and all files in the node_modules folder
+                exclude: /node_modules/,
                 loader: "jsxhint-loader"
             }
         ],      
@@ -32,6 +33,11 @@ module.exports = {
             loader: 'style-loader!css-loader' 
         }]
     },
+    plugins: [
+        new CopyWebpackPlugin([
+            { from: './html' }
+        ])
+    ],
     jshint: {
         esnext: true,
         asi: true,

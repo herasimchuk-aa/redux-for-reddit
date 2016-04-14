@@ -1,28 +1,30 @@
 import { take, put, call, fork, cancel, apply } from 'redux-saga/effects'
 import { isCancelError }                        from 'redux-saga'
 
-import * as authAction  from '../actions/auth'
+import { loginStarted,
+         loginCompleted,
+         loginError }   from '../actions/auth'
 import api              from '../api/reddit/index'
 
 function* authorize() {
     try {
         let isAuth = api.user.isAuth()
         if (isAuth) {
-            yield put(authAction.loginCompleted())
+            yield put(loginCompleted())
         }
         else {
             let result = yield apply(api.user, api.user.login)
             if(result) {
-                yield put(authAction.loginCompleted())
+                yield put(loginCompleted())
             }
             else {
-                yield put(authAction.loginError('error'))
+                yield put(loginError('error'))
             }
         }
     }
     catch(error) {
         if(!isCancelError(error)) {
-            yield put(authAction.loginError(error))
+            yield put(loginError(error))
         }
 
         console.log(error)
@@ -48,6 +50,6 @@ export default function* root() {
 
     let isAuth = api.user.isAuth()
     if(isAuth) {
-        yield put(authAction.loginStarted())
+        yield put(loginStarted())
     }
 }

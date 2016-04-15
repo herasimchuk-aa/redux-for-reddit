@@ -5,26 +5,26 @@ export function selectLink(linkName) {
     }
 }
 
-export function loadLinkStarted(linkName) {
-    return {
-        type: 'LOAD_LINK_STARTED',
-        payload: linkName
-    }
-}
+// export function loadLinkStarted(linkName) {
+//     return {
+//         type: 'LOAD_LINK_STARTED',
+//         payload: linkName
+//     }
+// }
 
-export function loadLinkCompleted(link) {
-    return {
-        type: 'LOAD_LINK_COMPLETED',
-        payload: link
-    }
-}
+// export function loadLinkCompleted(link) {
+//     return {
+//         type: 'LOAD_LINK_COMPLETED',
+//         payload: link
+//     }
+// }
 
-export function loadLinkError(error) {
-    return {
-        type: 'LOAD_LINK_ERROR',
-        payload: error
-    }
-}
+// export function loadLinkError(error) {
+//     return {
+//         type: 'LOAD_LINK_ERROR',
+//         payload: error
+//     }
+// }
 
 export function parseLinkStarted(link) {
     return {

@@ -28,12 +28,7 @@ export default class Sidebar extends Component {
         }
 
         return (
-            <div className="sidebar">
-                <div className="sidebar__icon">
-                    <Link to={'/r'}>
-                        <i className="fa fa-reddit-alien"></i>
-                    </Link>
-                </div>          
+            <div className="sidebar">        
                 <div className="sidebar__icon">
                     {signButton}
                 </div>

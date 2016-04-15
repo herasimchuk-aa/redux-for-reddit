@@ -14,7 +14,8 @@ const routes = (
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRedirect to="/hot" /> 
-            <Route path="/search" component={Search} name="search" />
+            <Route path="/search" component={Search} />
+            <Route path="/s" component={Navigation} name="s" />            
             <Route path="/subreddits" component={Subreddits} />                 
             <Route path="/r/:subreddit(/:sort)" component={Navigation} name="subreddit" />
             <Route path="/:sort" component={Navigation} name="front" />         

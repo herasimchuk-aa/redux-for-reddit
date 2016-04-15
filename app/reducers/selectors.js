@@ -21,6 +21,12 @@ export function getFilterOptions(state) {
             sort
         }
     }
+    else if (routeName === 's') {
+        return {
+            type: routeName,
+            value: state.router.params.q || ''
+        }
+    }
 
     return {
         type: 'none'

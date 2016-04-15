@@ -1,5 +1,9 @@
 import React, { Component }     from 'react'
-import Search                   from '../components/Search'
+import { bindActionCreators }   from 'redux'
+import { connect }              from 'react-redux'
+
+import Search       from '../components/Search'
+import { search }   from '../actions/links'
 
 import '../../styles/search.css'
 
@@ -7,8 +11,22 @@ export default class SearchContainer extends Component {
     render() {
         return (
             <div>
-                <Search/>
+                <Search search={this.props.search} />
             </div>
         )
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        test: 'test'
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        search: bindActionCreators(search, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer)

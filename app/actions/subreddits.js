@@ -1,6 +1,7 @@
-export function loadSubredditsStarted() {
+export function loadSubredditsStarted(params) {
     return {
-        type: 'LOAD_SUBREDDITS_STARTED'
+        type: 'LOAD_SUBREDDITS_STARTED',
+        payload: params
     }
 }
 
@@ -11,9 +12,16 @@ export function loadSubredditsCompleted(result) {
     }
 }
 
-export function loadSubredditsError(result) {
+export function loadSubredditsError(error) {
     return {
         type: 'LOAD_SUBREDDITS_ERROR',
-        payload: result
+        payload: error
     }
+}
+
+export function selectSubreddit(subreddit) {
+	return {
+		type: 'SELECT_SUBREDDIT',
+		payload: subreddit
+	}
 }

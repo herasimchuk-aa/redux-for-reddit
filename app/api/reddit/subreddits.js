@@ -7,7 +7,7 @@ export default class Subreddits extends Base {
 
     get(params) {
         let url = '/subreddits/popular' 
-        let query
+        let query = params
 
         return super
             .get(url, query)

@@ -9,15 +9,13 @@ const defaultState = {
 export const subreddits = handleActions({
     ['LOAD_SUBREDDITS_STARTED']: (state, action) => ({
         ...state,
-        isPending: true,
-        entities: action.payload
+        isPending: true
     }),
 
     ['LOAD_SUBREDDITS_COMPLETED']: (state, action) => ({
         ...state,
         isPending: false,
-        entities: action.payload,
-        page: ++state.page
+        entities: action.payload
     }),
 
 }, defaultState)

@@ -25,4 +25,18 @@ export default class Links extends Base {
                 })
             })
     }
+
+    search(params) {
+        let url = `/r/${params.subreddit}/search`
+        
+        let query = {
+            q: 'misnk'
+        }
+
+        return super
+            .get(url, query)
+            .then(result => {
+                return result
+            })
+    }
 }

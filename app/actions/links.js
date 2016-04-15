@@ -66,3 +66,10 @@ export function voteError(error) {
         payload: error
     }
 }
+
+export function search(params) {
+    return {
+        type: 'SEARCH',
+        payload: params
+    }
+}

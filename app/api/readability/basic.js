@@ -6,8 +6,9 @@ export default class Basic {
     }
 
     parse() {
-        const resourceUrl = this.thing.url
-        return fetchJsonp(`https://readability.com/api/content/v1/parser?url=${resourceUrl}&token=e97c4f658162139ec8e04c4cbb2e80518c66757f`)
+        const resourceUrl = this.thing.url,
+              token = 'e97c4f658162139ec8e04c4cbb2e80518c66757f'
+        return fetchJsonp(`https://readability.com/api/content/v1/parser?url=${resourceUrl}&token=${token}`)
             .then((response) => {
                 return response.json()
             })

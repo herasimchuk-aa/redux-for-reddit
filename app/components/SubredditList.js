@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import decode               from 'decode-html'
 import _                    from 'lodash'
-import Scroll               from 'react-scroll' 
 import { Link }             from 'react-router'
 
 import '../../styles/subreddit-list.css'
 
 export default class SubredditList extends Component {
-    componentDidUpdate() {
-      window.scrollTo(0, 0)
-    }
-
     loadNext() {
         let filter = {
             after: _.last(this.props.subreddits).name

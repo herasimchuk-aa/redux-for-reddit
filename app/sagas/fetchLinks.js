@@ -9,8 +9,15 @@ import api                  from '../api/reddit/index'
 
 function* fetchLiks(action) {
     try {
-        let params = action.payload,
+        let links = [],
+            params = action.payload
+
+        if (params.type === 'subreddit' || params.type === 'front') {
             links = yield apply(api.links, api.links.get, [params])
+        }
+        else if (params.type === 'search') {
+            links = yield apply(api.links, api.links.search, [params])
+        }
 
         if (params.after) {
             yield put(mergeLinks(links))
@@ -24,7 +31,6 @@ function* fetchLiks(action) {
     }
     catch(error) {
         yield put(loadLinksError(error))
-        console.log(error)
     }
 }
 

@@ -16,27 +16,26 @@ export default class Links extends Base {
 
         return super
             .get(url, query)
-            .then(result => {
-                return result.map(item => {
-                    if (item.kind == this.types.links && item.data) {
-                        item.data.type = this.types.links
-                        return item.data
-                    }
-                })
-            })
+            .then(this.normalize)
     }
 
     search(params) {
-        let url = `/r/${params.subreddit}/search`
-        
-        let query = {
-            q: 'misnk'
-        }
+        let url = `/search`,        
+            query = {
+                q: params.query
+            }
 
         return super
             .get(url, query)
-            .then(result => {
-                return result
-            })
+            .then(this.normalize)
+    }
+
+    normalize(result) {
+         return result.map(item => {
+            if (item.kind === 't3' && item.data) {
+                item.data.type = item.kind
+                return item.data
+            }
+        })       
     }
 }

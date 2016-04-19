@@ -12,8 +12,8 @@ export default class AddCommentForm extends Component {
         this.props.submitComment(this.props.commentId, this.state.value)
     }
 
-    handleChange(f, s) {
-        this.setState({value: f.target.value})
+    handleChange(event) {
+        this.setState({value: event.target.value})
     }
 
     render() {

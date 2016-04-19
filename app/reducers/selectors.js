@@ -1,11 +1,10 @@
 import _ from 'lodash'
 
 export function getFilterOptions(state) {
-    let routeName = _.last(state.router.routes).name
+    let routeName = _.last(state.router.routes).name,
+        sort = state.router.params.sort || 'hot'
 
     if (routeName === 'front') {
-        let sort = state.router.params.sort || 'hot'
-
         return {
             type: routeName,
             sort
@@ -13,7 +12,6 @@ export function getFilterOptions(state) {
     }
     else if (routeName === 'subreddit') {
         let subreddit = state.router.params.subreddit || 'all'
-        let sort = state.router.params.sort || 'hot'
 
         return {
             type: routeName,
@@ -21,10 +19,11 @@ export function getFilterOptions(state) {
             sort
         }
     }
-    else if (routeName === 's') {
+    else if (routeName === 'search') {
         return {
             type: routeName,
-            value: state.router.params.q || ''
+            query: state.router.params.query || '',
+            sort
         }
     }
 

@@ -3,12 +3,11 @@ import Tooltip                  from 'rc-tooltip'
 import { Router, Route, Link }  from 'react-router'
 
 import { pushState, replaceState }  from 'redux-router'
-import { buildRoute }       from '../utils/routes'
+import { buildRoute }               from '../utils/routes'
 
 import 'rc-tooltip/assets/bootstrap_white.css'
 import '../../styles/tooltip.css'
 import '../../styles/select-filter.css'
-
 
 export default class SelectFilter extends Component {
     updateFilter(filter) {

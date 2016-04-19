@@ -13,8 +13,8 @@ export default class Navigation extends Component {
                 return `r/${filter.subreddit}`
             case 'front':
                 return `front`
-            case 's':
-                return `search: ${filter.value}`                            
+            case 'search':
+                return `search: ${filter.query}`                            
         }
     }
 

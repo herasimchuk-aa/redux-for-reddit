@@ -16,7 +16,7 @@ export default class HtmlViewer extends Component {
                 </div>
                 <hr/>
                 <div className="viewer__info">
-                    <span>by Dan Abramov for </span>
+                    <span>by Author Name</span>
                 </div>
                 <div className="viewer__body">
                     <div dangerouslySetInnerHTML={this.createInnerHTML()}></div>

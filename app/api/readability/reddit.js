@@ -6,7 +6,7 @@ export default class Reddit {
     parse() {
         return new Promise((resolve) => {
             resolve({
-                body: this.thing.selftext_html,
+                body: this.thing.selftext_html || '',
                 isSelf: true
             })
         })

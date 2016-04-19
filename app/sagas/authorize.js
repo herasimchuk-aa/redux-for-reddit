@@ -26,8 +26,6 @@ function* authorize() {
         if(!isCancelError(error)) {
             yield put(loginError(error))
         }
-
-        console.log(error)
     }
 }
 

@@ -18,9 +18,7 @@ export default class SearchContainer extends Component {
 }
 
 function mapStateToProps(state) {
-    return {
-        test: 'test'
-    }
+    return { }
 }
 
 function mapDispatchToProps(dispatch) {

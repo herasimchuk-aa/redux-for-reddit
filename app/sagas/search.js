@@ -10,9 +10,11 @@ function* search(action) {
     yield put(clearLinks())
 
     let filter = {
-        type: 's',
-        value: action.payload
-    }   
+        type: 'search',
+        query: action.payload,
+        sort: 'hot'
+    }
+    
     yield put(pushState(null, buildRoute(filter)))    
 }
 
